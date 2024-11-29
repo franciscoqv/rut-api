@@ -17,7 +17,7 @@ export default function handler(req, res) {
       }
       else if (type == 2){
         if (cleanedRUT.length === 9) {
-          formattedRUT = cleanedRUT.slice(0, 8) + '-' + cleanedRUT.slice(8);
+          formattedRUT = cleanedRUT.slice(0, 2) + '.' + cleanedRUT.slice(2, 5) + '.' + cleanedRUT.slice(5, 8) + '-' + cleanedRUT.slice(8);
         }
         else if (input.length === 8) {
           formattedRUT = cleanedRUT.slice(0, 1) + '.' + cleanedRUT.slice(1, 4) + '.' + cleanedRUT.slice(4, 7) + '-' + cleanedRUT.slice(7);
