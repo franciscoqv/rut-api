@@ -10,7 +10,7 @@ export default function handler(req, res) {
       // Delete points and dashes from the RUT
       const cleanedRUT = RUT.replace(/[.-]/g, '');
 
-      const formattedRUT = '';
+      var formattedRUT = '';
       // Modify the RUT
       if (type == 1){
         formattedRUT = cleanedRUT.slice(0, -1) + '-' + cleanedRUT.slice(-1);
