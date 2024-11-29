@@ -16,11 +16,11 @@ export default function handler(req, res) {
         formattedRUT = cleanedRUT.slice(0, -1) + '-' + cleanedRUT.slice(-1);
       }
       else if (type == 2){
-        if (input.length === 9) {
-          formattedRUT = input.slice(0, 8) + '-' + input.slice(8);
+        if (cleanedRUT.length === 9) {
+          formattedRUT = cleanedRUT.slice(0, 8) + '-' + cleanedRUT.slice(8);
         }
         else if (input.length === 8) {
-          formattedRUT = input.slice(0, 1) + '.' + input.slice(1, 4) + '.' + input.slice(4, 7) + '-' + input.slice(7);
+          formattedRUT = cleanedRUT.slice(0, 1) + '.' + cleanedRUT.slice(1, 4) + '.' + cleanedRUT.slice(4, 7) + '-' + cleanedRUT.slice(7);
         }
       }
       else if (type == 3){
