@@ -1,8 +1,7 @@
 export default function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const { RUT } = req.body[0];
-      const { type } = req.body[1];
+      const { RUT, type } = req.body;
 
       if (!RUT || typeof RUT !== 'string') {
         return res.status(400).json({ error: 'Invalid RUT provided' });
