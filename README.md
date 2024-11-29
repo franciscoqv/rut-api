@@ -1,7 +1,7 @@
 # rut-api
-Transforma el RUT desde entre formatos (e.g., 12.345.678-9 →123456789)
+API que transforma un RUT desde un formato a otro. Ejemplo: 12.345.678-9 → 123456789
 
-Actualmente sólo hay un endpoint disponible y se llama "Rut with DV", el que funciona recibiendo un rut con dígito verificador, el que luego transforma. Da igual si incluye puntos o guión porque lo primero que hace el código es eliminar todo eso.
+Actualmente sólo hay un endpoint disponible y se llama "Rut with DV", el que funciona recibiendo un rut con dígito verificador. Da igual si incluye puntos o guión porque lo primero que hace el código es eliminar todo eso.
 
 Al llamar al endpoint, se debe seleccionar el tipo de respuesta que se desea. Existen cuatro opciones:
 //Type 1: 12345678-9
