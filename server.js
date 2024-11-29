@@ -7,7 +7,7 @@ function modifyRUT(rut) {
 
 // Create an HTTP server
 const server = http.createServer((req, res) => {
-  if (req.method === 'POST' && req.url === '/api/rut') {
+  if (req.method === 'POST' && req.url === '/rut') {
     let body = '';
 
     // Collect the data from the request
@@ -34,7 +34,13 @@ const server = http.createServer((req, res) => {
         return res.end(JSON.stringify({ error: 'Invalid JSON payload' }));
       }
     });
-  } else {
+  } 
+  else if (req.method === 'GET' && req.url === '/') {
+    res.setHeader('Content-Type', 'text/html');
+    res.statusCode = 200;
+    res.end('<html><body><h1>Home is working!</h1></body></html>');
+  }
+  else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ error: 'Not Found' }));
   }
