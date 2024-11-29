@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     // Handle POST request for /rut
-    if (req.method === 'POST' && req.url === '/rut') {
+    if (req.method === 'POST' && req.url === '/rut_home') {
       let body = '';
   
       // Collect the data from the request
