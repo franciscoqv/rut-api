@@ -33,7 +33,13 @@ export default function handler(req, res) {
 
       return res.status(200).json({ formattedRUT });
     } catch (err) {
-      return res.status(400).json({ error: 'Invalid JSON payload' });
+      // Return a detailed error response
+      return res.status(400).json({
+        error: 'Invalid JSON payload',
+        message: err.message,  // Include the error message
+        stack: err.stack,      // Optionally include the stack trace (helpful during development)
+        timestamp: new Date().toISOString(), // Include the timestamp for the error
+      });
     }
   } else {
     return res.status(404).json({ error: 'Not Found' });
