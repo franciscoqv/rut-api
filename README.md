@@ -17,5 +17,5 @@ Al llamar al endpoint, se debe seleccionar el tipo de respuesta que se desea. Ex
 
 Respuesta:
 ```
- curl -X POST https://rut-api.vercel.app/api/rut_with_dv -H "Content-Type: application/json" -d {"formattedRUT":"12.345.678-9"}
+{"formattedRUT":"12.345.678-9"}
 ```
