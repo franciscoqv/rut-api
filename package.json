@@ -1,0 +1,12 @@
+{
+  "name": "rut-api",
+  "version": "1.0.0",
+  "description": "Transforma el RUT desde entre formatos (e.g., 12.345.678-9 →123456789)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
