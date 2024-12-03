@@ -8,7 +8,7 @@ export default function handler(req, res) {
       }
 
       // Delete points and dashes from the RUT
-      const cleanedRUT = RUT.replace(/[.-]/g, '');
+      var cleanedRUT = RUT.replace(/[.-]/g, '');
 
       // Delete prefixed zeros (e.g., 0028393044 --> 28393044)
       cleanedRUT = Number(cleanedRUT.slice(0, -1)).toString() + cleanedRUT.slice(-1);
