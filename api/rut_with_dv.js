@@ -10,6 +10,9 @@ export default function handler(req, res) {
       // Delete points and dashes from the RUT
       const cleanedRUT = RUT.replace(/[.-]/g, '');
 
+      // Delete prefixed zeros (e.g., 0028393044 --> 28393044)
+      cleanedRUT = Number(cleanedRUT.slice(0, -1)).toString() + cleanedRUT.slice(-1);
+
       var formattedRUT = '';
       // Modify the RUT
       if (type == 1){
@@ -46,7 +49,7 @@ export default function handler(req, res) {
 }
 
 
-//Type 1: 17176334-7
-//Type 2: 17.176.334-7
-//Type 3: 171763347
-//Type 4: 17176334
+//Type 1: 12345678-9
+//Type 2: 12.345.678-9
+//Type 3: 123456789
+//Type 4: 12345678
